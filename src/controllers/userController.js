@@ -1,7 +1,7 @@
 import mysql from "../adapters/mysql.js";
 import { errorHandler } from "../utils/errors.js";
 import { postUserModel } from "../models/userModel.js";
-import bcrypt from "bcrypt"
+import bcrypt from "bcryptjs"
 
 const postUserController = (req, res, next, config) => {
     const conn      = mysql.start(config);

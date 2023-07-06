@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt"
+import bcrypt from "bcryptjs"
 import { errorHandler } from "../utils/errors.js";
 import { sendResponseUnauthorized } from "../utils/responses.js";
 import { getLoginModel } from "../models/loginModel.js";
