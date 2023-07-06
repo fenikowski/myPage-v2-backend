@@ -24,8 +24,6 @@ const postLoginController = (req, res, next, config) => {
                         return sendResponseUnauthorized(res, error)
                     }
 
-                    const { username } = userData;
-
                     next({ _data: { username } })
                 })
         })
