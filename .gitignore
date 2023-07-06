@@ -1,4 +1,4 @@
 node_modules
-/ssl/*
+src/ssl
 development.js
 production.js

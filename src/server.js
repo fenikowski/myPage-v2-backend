@@ -36,4 +36,14 @@ const server = app.listen(process.env.PORT || config.port, () => {
     console.log('Server listening on port ' + listeningPort);
 });
 
+process
+  .on('unhandledRejection', (reason, p) => {
+    console.error(reason, 'Unhandled Rejection at Promise', p);
+  })
+  .on('uncaughtException', err => {
+    // is not safe to resume normal operation after 'uncaughtException', because the system becomes corrupted:
+    console.error(err, 'Uncaught Exception thrown');
+    process.exit(1);
+  });
+
 export { app, server };
